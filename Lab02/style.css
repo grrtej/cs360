@@ -1,13 +1,26 @@
+/* Written by Gurtej Singh */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
-    --bg: #FAFFFD;
-    --fg: #342E37;
-    --link: #FEFCFD;
-    --link-hover: #9FD356;
+    --primary: #6735b2;
+    --secondary: #80b235;
+    --light: #fafafa;
+    --dark: #202020;
+
+    --fg: var(--dark);
+    --bg: var(--light);
+    --link-fg: var(--primary);
+    --link-hover-fg: var(--light);
+    --link-hover-bg: var(--primary);
+    --current-fg: var(--light);
+    --current-bg: var(--secondary);
 }
 
 body {
-    background-color: var(--bg);
     color: var(--fg);
+    background-color: var(--bg);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -15,8 +28,15 @@ body {
 :is(header, footer) {
     display: flex;
     justify-content: space-between;
-    padding: 8px;
-    background-color: #424B54;
+    padding: 0 1em;
+}
+
+header {
+    border-bottom: 2px solid;
+}
+
+footer {
+    border-top: 2px solid;
 }
 
 :is(header, footer) ul {
@@ -27,14 +47,35 @@ body {
 }
 
 :is(header, footer) a {
+    color: var(--link-fg);
     text-decoration: none;
-    transition: color .2s;
-}
-
-:is(header, footer) :is(a:link, a:visited) {
-    color: var(--link);
+    transition: all .2s;
+    padding: .5em;
 }
 
 :is(header, footer) a:hover {
-    color: var(--link-hover);
+    color: var(--link-hover-fg);
+    background-color: var(--link-hover-bg);
+}
+
+#current {
+    color: var(--current-fg);
+    background-color: var(--current-bg);
+    font-weight: bold;
+}
+
+main {
+    padding: 1em;
+}
+
+img {
+    border: 1px solid;
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    font: italic smaller serif;
 }
