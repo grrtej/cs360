@@ -15,6 +15,12 @@
     --link-hover-bg: var(--primary);
     --current-fg: var(--light);
     --current-bg: var(--secondary);
+    --button-fg: var(--dark);
+    --button-bg: var(--light);
+    --button-hover-fg: var(--light);
+    --button-hover-bg: var(--primary);
+    --button-active-fg: var(--light);
+    --button-active-bg: var(--secondary);
 }
 
 body {
@@ -78,4 +84,47 @@ figure {
 
 figcaption {
     font: italic smaller serif;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin: 1em 0;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+    padding: .5em;
+}
+
+input[type=button] {
+    color: var(--button-fg);
+    background-color: var(--button-bg);
+    border-radius: 4px;
+    transition: all .1s;
+}
+
+input[type=button]:hover {
+    color: var(--button-hover-fg);
+    background-color: var(--button-hover-bg);
+}
+
+input[type=button]:active {
+    color: var(--button-active-fg);
+    background-color: var(--button-active-bg);
+}
+
+#contact-form :is(input, textarea) {
+    width: 200px;
+}
+
+#contact-wrapper {
+    display: flex;
+    justify-content: space-evenly;
 }
