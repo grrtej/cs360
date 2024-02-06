@@ -1,0 +1,40 @@
+:root {
+    --bg: #FAFFFD;
+    --fg: #342E37;
+    --link: #FEFCFD;
+    --link-hover: #9FD356;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fg);
+    margin: 0;
+    padding: 0;
+}
+
+:is(header, footer) {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: #424B54;
+}
+
+:is(header, footer) ul {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+}
+
+:is(header, footer) a {
+    text-decoration: none;
+    transition: color .2s;
+}
+
+:is(header, footer) :is(a:link, a:visited) {
+    color: var(--link);
+}
+
+:is(header, footer) a:hover {
+    color: var(--link-hover);
+}
