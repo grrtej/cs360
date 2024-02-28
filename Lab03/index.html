@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home | Lab03</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Include Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -55,85 +56,86 @@
         </div>
     </nav>
 
-    <main>
-        <div class="container-fluid">
-            <div class="row justify-content-center gap-3">
-                <h1 class="display-5"><i class="bi bi-mortarboard"></i> Lab Assignment #3 Home</h1>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+    <!-- Main (Gallery) -->
+    <main class="container py-3">
+        <h1 class="display-5"><i class="bi bi-mortarboard"></i> Welcome to Lab Assignment #3</h1>
+        <div class="row">
+            <!-- Image 1 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/QL0H064Ns38" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-1">
+                    <div class="card-body">
+                        <p class="card-text">a window in a rock wall surrounded by cactus</p>
+                        <p class="card-text"><small class="text-body-secondary">Eirik Skarstein</small></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/ZWeCTXJ1VO4" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-2">
+                    <div class="card-body">
+                        <p class="card-text">a close up view of a palm leaf</p>
+                        <p class="card-text"><small class="text-body-secondary">Mike Hindle</small></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/an1zPDoU4ZE" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-3">
+                    <div class="card-body">
+                        <p class="card-text">a large building with a lot of wooden doors</p>
+                        <p class="card-text"><small class="text-body-secondary">Pew Nguyen</small></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+            </div>
+            <!-- Quote -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card text-bg-primary text-end p-3">
+                    <figure class="mb-0">
+                        <blockquote class="blockquote">
+                            <p>To live is the rarest thing in the world. Most people exist, that is all.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-white">
+                            Oscar Wilde
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/sakT6t5CVPs" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-4">
+                    <div class="card-body">
+                        <p class="card-text">a man standing on top of a large rock formation</p>
+                        <p class="card-text"><small class="text-body-secondary">Karsten Winegeart</small></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+            </div>
+            <!-- Image 5 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/MsyPQIERfp4" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-5">
+                    <div class="card-body">
+                        <p class="card-text">a couple of people crossing a street at night</p>
+                        <p class="card-text"><small class="text-body-secondary">Kevin Mueller</small></p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="card my_card">
-                        <div class="card-body">
-                            <img src="https://source.unsplash.com/random/500x250" class="img-fluid" alt="Random Image">
-                            <h3 class="card-title">Sample Text</h3>
-                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto,
-                                quisquam dicta? Asperiores perferendis temporibus, vero impedit in dolore obcaecati
-                                accusantium!</p>
-                        </div>
+            </div>
+            <!-- Image 6 -->
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="card">
+                    <img src="https://source.unsplash.com/YPNBZZ-FovI" class="card-img-top" data-bs-toggle="modal"
+                        data-bs-target="#image-6">
+                    <div class="card-body">
+                        <p class="card-text">a blue van parked in front of a house</p>
+                        <p class="card-text"><small class="text-body-secondary">Dmitry Kropachev</small></p>
                     </div>
                 </div>
             </div>
@@ -152,9 +154,105 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <!-- Image 1 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/QL0H064Ns38" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image 2 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-2">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/ZWeCTXJ1VO4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image 3 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-3">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/an1zPDoU4ZE" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image 4 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-4">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/sakT6t5CVPs" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image 5 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-5">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/MsyPQIERfp4" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image 6 Modal -->
+    <div class="modal fade" tabindex="-1" id="image-6">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Photo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="https://source.unsplash.com/YPNBZZ-FovI" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Include Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Include Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <!-- Include imagesLoaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script>
+        imagesLoaded('.row', instance => {
+            new Masonry(instance.elements[0], {
+                percentPosition: true
+            });
+        });
+    </script>
 </body>
 
 </html>
