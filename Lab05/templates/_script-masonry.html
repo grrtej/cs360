@@ -1,0 +1,11 @@
+<!-- Include Masonry -->
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<!-- Include imagesLoaded -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    imagesLoaded('.row', instance => {
+        new Masonry(instance.elements[0], {
+            percentPosition: true
+        });
+    });
+</script>
