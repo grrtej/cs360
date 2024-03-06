@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home · Career Navigator</title>
+    <!-- Include Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- Include Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-compass"></i> Career Navigator</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="instructions.html">Instructions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <!-- fix margin end -->
+                    <a href="login.html" class="btn btn-outline-primary me-2" role="button">Sign in</a>
+                    <a href="signup.html" class="btn btn-warning" role="button">Sign up</a>
+                    <li class="nav-item"> <a class="nav-link" href="https://github.com/grrtej/cs360" target="_blank"><i
+                                class="bi bi-github"></i></a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main -->
+    <main class="container py-3">
+        <div class="container">
+            <h1>Sign in here</h1>
+            <p class="lead">You can save your search results once you sign in.</p>
+            <h3></h3>
+            <div class="row">
+                <form class="my-3 col-4">
+                    <div class="mb-3">
+                        <label class="form-label" for="email"><i class="bi bi-envelope"></i> Email</label>
+                        <input class="form-control" type="email" name="email" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="password"><i class="bi bi-key"></i> Password</label>
+                        <input class="form-control" type="password" name="password" id="password" required>
+                    </div>
+                    <button class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right"></i> Sign
+                        in</button>
+                </form>
+                <p>Don't have an account? <a href="signup.html">Sign up</a> here.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="container border-top pt-2">
+        <p><small>© 2024 Gurtej Singh, Jennie Tafoya</small></p>
+    </footer>
+
+    <!-- Skill Modal -->
+    <div class="modal fade" tabindex="-1" id="skill">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Sample Skill</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro voluptatem temporibus
+                        exercitationem. Molestiae libero quisquam, ab deserunt animi nemo explicabo ex laborum, nostrum
+                        quas unde illum, maiores veritatis quae optio doloribus atque quidem aliquid architecto fugiat.
+                        Id libero, recusandae, nisi totam accusantium itaque velit voluptatem cumque quisquam sunt
+                        vitae!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><i class="bi bi-lightning-charge-fill"></i>
+                        Learn!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
