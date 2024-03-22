@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'navigator-index' %}"><i class="bi bi-compass"></i> Career Navigator</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                {% for link in navbar.left %}
+                <li class="nav-item">
+                    <a class="nav-link{% if link.active %} active{% endif %}" href="{% url link.url %}">
+                        {{ link.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                {% for link in navbar.right %}
+                <li class="nav-item">
+                    <a class="nav-link{% if link.active %} active{% endif %}" href="{% url link.url %}">
+                        {{ link.title }}
+                    </a>
+                </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/grrtej/cs360" target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

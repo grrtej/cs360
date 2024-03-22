@@ -1,0 +1,93 @@
+<div class="row">
+    <!-- Image 1 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/QL0H064Ns38" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-1">
+            <div class="card-body">
+                <p class="card-text">a window in a rock wall surrounded by cactus</p>
+                <p class="card-text"><small class="text-body-secondary">Eirik Skarstein</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- Image 2 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/ZWeCTXJ1VO4" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-2">
+            <div class="card-body">
+                <p class="card-text">a close up view of a palm leaf</p>
+                <p class="card-text"><small class="text-body-secondary">Mike Hindle</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- Image 3 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/an1zPDoU4ZE" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-3">
+            <div class="card-body">
+                <p class="card-text">a large building with a lot of wooden doors</p>
+                <p class="card-text"><small class="text-body-secondary">Pew Nguyen</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- Quote -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card text-bg-primary text-end p-3">
+            <figure class="mb-0">
+                <blockquote class="blockquote">
+                    <p>To live is the rarest thing in the world. Most people exist, that is all.</p>
+                </blockquote>
+                <figcaption class="blockquote-footer mb-0 text-white">
+                    Oscar Wilde
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+    <!-- Image 4 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/sakT6t5CVPs" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-4">
+            <div class="card-body">
+                <p class="card-text">a man standing on top of a large rock formation</p>
+                <p class="card-text"><small class="text-body-secondary">Karsten Winegeart</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- Image 5 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/MsyPQIERfp4" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-5">
+            <div class="card-body">
+                <p class="card-text">a couple of people crossing a street at night</p>
+                <p class="card-text"><small class="text-body-secondary">Kevin Mueller</small></p>
+            </div>
+        </div>
+    </div>
+    <!-- Image 6 -->
+    <div class="col-sm-6 col-lg-4 mb-4">
+        <div class="card">
+            <img src="https://source.unsplash.com/YPNBZZ-FovI" class="card-img-top" data-bs-toggle="modal"
+                data-bs-target="#image-6">
+            <div class="card-body">
+                <p class="card-text">a blue van parked in front of a house</p>
+                <p class="card-text"><small class="text-body-secondary">Dmitry Kropachev</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Masonry -->
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+<!-- Include imagesLoaded -->
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<script>
+    imagesLoaded('.row', instance => {
+        new Masonry(instance.elements[0], {
+            percentPosition: true
+        });
+    });
+</script>

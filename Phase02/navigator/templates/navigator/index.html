@@ -1,0 +1,83 @@
+{% extends "navigator/base.html" %}
+{% block content %}
+
+<!-- Main -->
+<main class="container py-3">
+    <div class="container text-center">
+        <h1>🧭 Career Navigator (Phase #2)</h1>
+        <p class="lead">Find your next career move or discover relevant courses. Enter keywords below to begin.</p>
+    </div>
+    <div class="container px-5 py-2">
+        <form>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+                <input name="position" type="search" class="form-control" placeholder="Job Title"
+                    value="{{ query.position }}">
+                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                <input name="location" type="search" class="form-control" placeholder="Location"
+                    value="{{ query.location }}">
+                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="container p-5">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" style="width:20%"><i class="bi bi-briefcase"></i> Position</th>
+                    <th scope="col" style="width:15%"><i class="bi bi-buildings"></i> Company</th>
+                    <th scope="col" style="width:15%"><i class="bi bi-geo-alt"></i> Location</th>
+                    <th scope="col" style="width:30%"><i class="bi bi-file-text"></i> Description</th>
+                    <th scope="col" style="width:20%"><i class="bi bi-lightning-charge"></i> Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job in jobs %}
+                <tr>
+                    <td><a href="{{ job.link }}" target="_blank">{{ job.position }}</a></td>
+                    <td>{{ job.company }}</td>
+                    <td>{{ job.location }}</td>
+                    <td>{{ job.description|truncatewords:50 }}</td>
+                    <td>
+                        {% for skill in job.skills %}
+                        <span class="badge text-bg-primary" data-bs-toggle="modal" data-bs-target="#skill">
+                            {{ skill }}
+                        </span>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="container text-center fs-2">
+            <i class="bi bi-three-dots"></i>
+        </div>
+    </div>
+</main>
+
+<!-- Skill Modal -->
+<div class="modal fade" tabindex="-1" id="skill">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">Sample Skill</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic porro voluptatem temporibus
+                    exercitationem. Molestiae libero quisquam, ab deserunt animi nemo explicabo ex laborum, nostrum
+                    quas unde illum, maiores veritatis quae optio doloribus atque quidem aliquid architecto fugiat.
+                    Id libero, recusandae, nisi totam accusantium itaque velit voluptatem cumque quisquam sunt
+                    vitae!
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-lightning-charge-fill"></i>
+                    Learn!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

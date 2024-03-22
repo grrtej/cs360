@@ -1,0 +1,28 @@
+{% extends "navigator/base.html" %}
+{% block content %}
+
+<!-- Main -->
+<main class="container py-3">
+    <div class="container">
+        <h1>Sign in here</h1>
+        <p class="lead">You can save your search results once you sign in.</p>
+        <h3></h3>
+        <div class="row">
+            <form class="my-3 col-4">
+                <div class="mb-3">
+                    <label class="form-label" for="email"><i class="bi bi-envelope"></i> Email</label>
+                    <input class="form-control" type="email" name="email" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password"><i class="bi bi-key"></i> Password</label>
+                    <input class="form-control" type="password" name="password" id="password" required>
+                </div>
+                <button class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right"></i> Sign
+                    in</button>
+            </form>
+            <p>Don't have an account? <a href="{% url 'navigator-signup' %}">Sign up</a> here.</p>
+        </div>
+    </div>
+</main>
+
+{% endblock content %}
