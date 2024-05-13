@@ -9,6 +9,11 @@
 
 - Add courses that teach skills required by jobs.
 - Allow user registration to bookmark jobs and courses.
+- location-aware and cost-aware course offerings
+- degree roadmap
+- adivising system based on user preferences
+  - job title
+  - company size
 
 ## Issues
 

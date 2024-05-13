@@ -36,7 +36,7 @@ def index(request):
         "title": title,
         "navbar": gen_navbar(title),
         "jobs": Job.objects.filter(
-            (Q(position__icontains=p) | Q(description__icontains=p))
+            (Q(position__icontains=p) | Q(description__icontains=p) | Q(skills__icontains=p))
             & Q(location__icontains=l)
         ),
         "query": request.GET.dict(),
