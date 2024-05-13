@@ -1,0 +1,47 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Sign in{% endblock title %}
+
+{% block content %}
+
+
+<main class="container py-3">
+  <div class="container">
+
+    {% if form.errors %}
+    <h1 class="lead">⚠ Your username and password didn't match. Please try again.</h1>
+    {% endif %}
+
+    {% if next %}
+    {% if user.is_authenticated %}
+    <p>Your account doesn't have access to this page. To proceed,
+      please login with an account that has access.</p>
+    {% else %}
+    <p>Please login to see this page.</p>
+    {% endif %}
+    {% endif %}
+
+    <h1>Sign in here</h1>
+    <p class="lead">You can bookmark jobs you find interesting once you sign in.</p>
+
+    <div class="row">
+      <form class="my-3 col-4" method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="mb-3">
+          <div>{{ form.username.label_tag }}</div>
+          <div>{{ form.username }}</div>
+        </div>
+        <div class="mb-3">
+          <div>{{ form.password.label_tag }}</div>
+          <div>{{ form.password }}</div>
+        </div>
+        <!-- <input type="submit" value="login"> -->
+        <button class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right"></i> Sign in</button>
+        <input type="hidden" name="next" value="{{ next }}">
+      </form>
+    </div>
+
+  </div>
+</main>
+
+{% endblock content %}

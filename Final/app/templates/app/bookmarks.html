@@ -1,0 +1,107 @@
+{% extends 'app/base.html' %}
+
+{% block title %}Bookmarked Jobs{% endblock title %}
+
+{% block content %}
+
+
+<main class="container py-3">
+    <div class="container text-center">
+        <h1>💾 Bookmarked Jobs</h1>
+        <p class="lead">View jobs you saved for later here. Enter keywords below to filter.</p>
+    </div>
+    <div class="container px-5 py-2">
+        <form>
+            <div class="input-group input-group-lg">
+                <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+                <input name="position" type="search" class="form-control" placeholder="Job Title"
+                    value="{{ query.position }}">
+                <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
+                <input name="location" type="search" class="form-control" placeholder="Location"
+                    value="{{ query.location }}">
+                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="container p-5">
+        {% if bookmarks %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" style="width:2%"></th>
+                    <th scope="col" style="width:20%"><i class="bi bi-briefcase"></i> Position</th>
+                    <th scope="col" style="width:15%"><i class="bi bi-buildings"></i> Company</th>
+                    <th scope="col" style="width:15%"><i class="bi bi-geo-alt"></i> Location</th>
+                    <th scope="col" style="width:28%"><i class="bi bi-file-text"></i> Description</th>
+                    <th scope="col" style="width:20%"><i class="bi bi-lightning-charge"></i> Skills</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for job, skills in jobs_with_skills.items %}
+                {% if job in bookmarks %}
+                <tr>
+                    <td>
+                        <a class="link-danger" href="{% url 'delete-bookmark' job.id %}"><i
+                                class="bi bi-bookmark-dash"></i></a>
+                    </td>
+                    <td><a href="{{ job.link }}" target="_blank">{{ job.position }}</a></td>
+                    <td>{{ job.company }}</td>
+                    <td>
+                        {{ job.city }}, {{ job.state }}
+                        {% if job.is_remote %}
+                        <span class="badge text-bg-success">Remote</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ job.description|truncatewords:50 }}</td>
+                    <td>
+                        {% for skill in skills %}
+                        <span class="badge text-bg-primary" data-bs-toggle="modal"
+                            data-bs-target="#skill-{{ skill.id }}">
+                            {{ skill.name }}
+                        </span>
+                        {% endfor %}
+                    </td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+        <div class="container text-center fs-2">
+            <i class="bi bi-three-dots"></i>
+        </div>
+        {% else %}
+        <div class="container text-center fs-2">
+            <h1>No jobs found!</h1>
+        </div>
+        {% endif %}
+    </div>
+</main>
+
+{% for skill, courses in skills_with_courses.items %}
+<div class="modal fade" tabindex="-1" id="skill-{{ skill.id }}">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5">{{ skill.name }}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>{{ skill.description }}</p>
+                <ul>
+                    {% for course in courses %}
+                    <li>{{ course.name }}: <a href="{{ course.link }}">{{ course.link }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary"><i class="bi bi-lightning-charge-fill"></i>
+                    Learn!</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock content %}

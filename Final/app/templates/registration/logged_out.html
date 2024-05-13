@@ -1,0 +1,14 @@
+{% extends 'app/base.html' %}
+
+{% block title%}Bye!{% endblock title %}
+
+{% block content %}
+<main class="container py-3">
+  <div class="container">
+    <p>Logged out!</p>
+    <div>
+      <a href="{% url 'login'%}">Click here to login again.</a>
+    </div>
+  </div>
+</main>
+{% endblock %}
